@@ -1,16 +1,16 @@
 {
-  "name": "maker-agent",
-  "owner": {
-    "name": "Tooensure"
-  },
-  "metadata": {
-    "description": "Marketplace for the PMCR-O maker plugin."
-  },
-  "plugins": [
-    {
-      "name": "maker",
-      "source": "./plugins/maker",
-      "description": "Execute one explicitly authorized step from a validated PMCR-O plan."
-    }
-  ]
+    "name":  "maker-agent",
+    "owner":  {
+                  "name":  "Tooensure"
+              },
+    "metadata":  {
+                     "description":  "Marketplace for the PMCR-O maker plugin."
+                 },
+    "plugins":  [
+                    {
+                        "name":  "pmcro-maker",
+                        "source":  "./plugins/maker",
+                        "description":  "PMCR-O Maker — executes only an authorized PlanFrame step and records what actually happened."
+                    }
+                ]
 }

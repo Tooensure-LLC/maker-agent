@@ -1,6 +1,9 @@
 {
     "$schema":  "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-    "name":  "maker",
+    "name":  "pmcro-maker",
     "version":  "0.1.0",
-    "description":  "Execute one explicitly authorized step from a validated PMCR-O plan."
+    "description":  "PMCR-O Maker — executes only an authorized PlanFrame step and records what actually happened.",
+    "interface":  {
+                      "displayName":  "PMCR-O Maker"
+                  }
 }
