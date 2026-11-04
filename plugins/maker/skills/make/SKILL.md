@@ -50,3 +50,7 @@ Own only MAKE. Do not grade your own work; the Checker does that independently. 
 - [API and Trail contract](references/api-grpc-and-trail-contract.md)
 - [Input schema](references/input.schema.json) and [output schema](references/output.schema.json)
 - [Request template](assets/request.json)
+
+## Pattern role
+
+Worker in the orchestrator-workers pattern. It executes exactly one explicitly authorized step and returns a receipt of what actually happened. It never plans, checks or reflects.
