@@ -1,0 +1,18 @@
+{
+  "format": "pmcro.agent-commands/v1",
+  "commands": [
+    {
+      "command": "/maker:make",
+      "agentId": "maker",
+      "skillId": "maker:make",
+      "phase": "MAKE",
+      "inputMode": "typed-json",
+      "inputSchema": "plugins/maker/skills/make/references/input.schema.json",
+      "outputSchema": "plugins/maker/skills/make/references/output.schema.json",
+      "apiReplySchema": "schemas/phase-reply.schema.json",
+      "trailKind": "maker.result",
+      "pluginMention": "[@maker](plugin://maker@maker-agent)",
+      "invocationPrefix": "I AM the PMCR-O Maker Agent."
+    }
+  ]
+}

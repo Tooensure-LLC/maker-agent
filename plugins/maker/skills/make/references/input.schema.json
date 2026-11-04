@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "/maker:make typed input",
+  "type": "object",
+  "required": [
+    "raw_seed",
+    "plan_ref",
+    "authorized_step"
+  ],
+  "properties": {
+    "raw_seed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plan_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorized_step": {
+      "type": "object",
+      "required": [
+        "step_id",
+        "scope",
+        "authorization_ref"
+      ],
+      "properties": {
+        "step_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorization_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

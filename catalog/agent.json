@@ -1,0 +1,17 @@
+{
+  "format": "pmcro.role-agent/v1",
+  "id": "maker",
+  "marketplace": "maker-agent",
+  "role": "maker",
+  "phase": "MAKE",
+  "command": "/maker:make",
+  "pluginMention": "[@maker](plugin://maker@maker-agent)",
+  "skillId": "maker:make",
+  "entrypoint": "plugins/maker/skills/make/SKILL.md",
+  "inputSchema": "plugins/maker/skills/make/references/input.schema.json",
+  "outputSchema": "plugins/maker/skills/make/references/output.schema.json",
+  "apiReplySchema": "schemas/phase-reply.schema.json",
+  "trailKind": "maker.result",
+  "separateContext": true,
+  "registrationState": "candidate"
+}

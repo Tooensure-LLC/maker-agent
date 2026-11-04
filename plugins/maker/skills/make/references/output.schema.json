@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "maker maker.result frame",
+  "type": "object",
+  "required": [
+    "frame_id",
+    "trail_id",
+    "cycle_id",
+    "seq",
+    "role",
+    "kind",
+    "parent_id",
+    "prev_hash",
+    "hash",
+    "status",
+    "payload"
+  ],
+  "properties": {
+    "frame_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trail_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cycle_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "role": {
+      "const": "maker"
+    },
+    "kind": {
+      "const": "maker.result"
+    },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prev_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "open",
+        "complete",
+        "blocked",
+        "halted"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "raw_seed",
+        "plan_ref",
+        "authorized_step",
+        "make_receipt",
+        "files_changed",
+        "commands",
+        "claim"
+      ],
+      "properties": {
+        "raw_seed": {
+          "type": "string",
+          "minLength": 1
+        },
+        "plan_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorized_step": {
+          "type": "object"
+        },
+        "make_receipt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "files_changed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "action",
+              "sha256"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "commands": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "claim": {
+          "enum": [
+            "complete",
+            "partial",
+            "blocked"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

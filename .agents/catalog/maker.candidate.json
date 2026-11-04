@@ -1,0 +1,18 @@
+{
+    "format":  "pmcro.role-plugin-candidate/v1",
+    "plugin":  "maker",
+    "role":  "maker",
+    "phase":  "MAKE",
+    "runtime":  "maf-native-agent-skills",
+    "registrationState":  "candidate",
+    "registered":  false,
+    "granted":  false,
+    "activated":  false,
+    "published":  false,
+    "commandCatalog":  ".agents/commands/commands.json",
+    "apiReplySchema":  "schemas/phase-reply.schema.json",
+    "messageFrameSchema":  "schemas/role-message-frame.schema.json",
+    "agents":  [
+                   "plugins/maker/agents/maker.agent.md"
+               ]
+}

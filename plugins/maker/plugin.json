@@ -1,0 +1,6 @@
+{
+    "$schema":  "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name":  "maker",
+    "version":  "0.1.0",
+    "description":  "Execute one explicitly authorized step from a validated PMCR-O plan."
+}
