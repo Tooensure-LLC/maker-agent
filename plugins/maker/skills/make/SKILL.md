@@ -53,4 +53,4 @@ Own only MAKE. Do not grade your own work; the Checker does that independently. 
 
 ## Pattern role
 
-Worker in the orchestrator-workers pattern. It executes exactly one explicitly authorized step and returns a receipt of what actually happened. It never plans, checks or reflects.
+Worker called only by the Orchestrator (hub-and-spoke). It executes exactly one explicitly authorized step and returns a receipt of what actually happened. It never plans, checks or reflects, and never calls another role.
