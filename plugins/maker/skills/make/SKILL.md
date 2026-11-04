@@ -51,6 +51,13 @@ Own only MAKE. Do not grade your own work; the Checker does that independently. 
 - [Input schema](references/input.schema.json) and [output schema](references/output.schema.json)
 - [Request template](assets/request.json)
 
+## Quality bar
+
+- Touch only what the authorized scope names.
+- When the scope cites Checker findings from an earlier receipt, change only what those findings name and do not redo work that already passed.
+- Record every revision's `files_changed` and `commands` so the Checker can compare against the prior receipt.
+- Claim complete only when every step in scope was done; otherwise claim partial or blocked.
+
 ## Pattern role
 
-Worker called only by the Orchestrator (hub-and-spoke). It executes exactly one explicitly authorized step and returns a receipt of what actually happened. It never plans, checks or reflects, and never calls another role.
+Worker called only by the Orchestrator (hub-and-spoke). It executes exactly one explicitly authorized step and returns a receipt of what actually happened. It never plans, checks or reflects, and never calls another role. The Orchestrator may call it again for a bounded revision under a new authorization.
